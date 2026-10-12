@@ -1,0 +1,14 @@
+=== comm_dp_eps8 start 21:43:48
+Communication: 153.76 MB total over 10 rounds (102.50 MB down, 51.26 MB up) | training time 140.5s, avg round 14.0s | saved to model\communication_comm_dp_eps8.json
+=== comm_dp_eps8 end 21:47:06 (exit codes server 0, client1 0, client2 0)
+=== comm_dp_eps3 start 21:47:06
+Communication: 153.76 MB total over 10 rounds (102.50 MB down, 51.26 MB up) | training time 136.9s, avg round 13.7s | saved to model\communication_comm_dp_eps3.json
+=== comm_dp_eps3 end 21:50:22 (exit codes server 0, client1 0, client2 0)
+=== comm_dp_eps1 start 21:50:22
+=== comm_dp_eps1 FAILED: client2 exit code 1
+  File "F:\Files\DPSA LAB\CAT-2\Client-2\.venv\lib\site-packages\scipy\sparse\_compressed.py", line 1167, in toarray
+    out = self._process_toarray_args(order, out)
+  File "F:\Files\DPSA LAB\CAT-2\Client-2\.venv\lib\site-packages\scipy\sparse\_base.py", line 1354, in _process_toarray_args
+    return np.zeros(self.shape, dtype=self.dtype, order=order)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.20 MiB for an array with shape (63, 5002) and data type float32
+SWEEP ABORTED

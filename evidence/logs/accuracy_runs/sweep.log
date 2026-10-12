@@ -1,0 +1,17 @@
+=== nodp start 21:13:46
+21:15:37 | INFO | Round 10: eval loss 0.2494 | accuracy 0.9452 | f1 0.9602 | precision 0.9595 | recall 0.9609
+[92mINFO [0m:      Run finished 10 round(s) in 101.48s
+=== nodp end 21:15:38
+=== dp_eps8 start 21:15:38
+21:18:02 | INFO | Round 10: eval loss 0.4085 | accuracy 0.8764 | f1 0.8754 | precision 0.8614 | recall 0.8936
+[92mINFO [0m:      Run finished 10 round(s) in 134.63s
+=== dp_eps8 end 21:18:03
+=== dp_eps3 start 21:18:03
+21:20:44 | INFO | Round 10: eval loss 0.4064 | accuracy 0.8751 | f1 0.8736 | precision 0.8608 | recall 0.8905
+[92mINFO [0m:      Run finished 10 round(s) in 156.41s
+=== dp_eps3 end 21:20:46
+=== dp_eps1 start 21:20:46
+21:23:31 | INFO | Round 10: eval loss 0.3959 | accuracy 0.8737 | f1 0.8722 | precision 0.8612 | recall 0.8873
+[92mINFO [0m:      Run finished 10 round(s) in 157.80s
+=== dp_eps1 end 21:23:33
+SWEEP DONE

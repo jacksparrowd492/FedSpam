@@ -1,0 +1,166 @@
+{
+  "notes": [
+    "Bytes are serialized Flower protobuf messages measured on the server; gRPC/TCP framing adds <1%.",
+    "MB = 10^6 bytes. Each round sends the global model twice per client (fit + evaluate) and receives one model update plus a small evaluation result.",
+    "training_time_s runs from the first fit instruction to the last evaluation result; non_training_time_s is that minus the slowest client's local training time in each round.",
+    "On localhost the network transfer itself is near-instant; run across laptops for real LAN timings."
+  ],
+  "runs": [
+    {
+      "run": "comm_nodp",
+      "dp_epsilon": null,
+      "dp_noise_multiplier": null,
+      "rounds": 10,
+      "mb_total_all_clients": 153.76082,
+      "mb_per_round_all_clients": 15.376082,
+      "training_time_s": 67.38732647895813,
+      "avg_round_s": 6.738732647895813,
+      "min_round_s": 6.012534856796265,
+      "max_round_s": 9.749100685119629,
+      "non_training_time_s": 3.5445165634155273,
+      "wall_clock_s": 96.10701751708984,
+      "client_failures": 0,
+      "clients": [
+        {
+          "client_id": "b31325a9b99f4673ba93438ecf876a2a",
+          "num_examples": 25960,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62825,
+          "mb_total": 76.88041,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 62.59016537666321,
+          "avg_train_time_per_round_s": 6.259016537666321
+        },
+        {
+          "client_id": "891e75f8c30f4503bb6d45fd51fc39cf",
+          "num_examples": 27061,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62825,
+          "mb_total": 76.88041,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 63.8428099155426,
+          "avg_train_time_per_round_s": 6.38428099155426
+        }
+      ]
+    },
+    {
+      "run": "comm_dp_eps8",
+      "dp_epsilon": 7.997787042918863,
+      "dp_noise_multiplier": 0.548248291015625,
+      "rounds": 10,
+      "mb_total_all_clients": 153.762,
+      "mb_per_round_all_clients": 15.3762,
+      "training_time_s": 140.4642424583435,
+      "avg_round_s": 14.04642424583435,
+      "min_round_s": 13.499043941497803,
+      "max_round_s": 15.139004468917847,
+      "non_training_time_s": 3.4889168739318848,
+      "wall_clock_s": 190.14019417762756,
+      "client_failures": 0,
+      "clients": [
+        {
+          "client_id": "79890a0ba374409e8528840a9590c3e9",
+          "num_examples": 25960,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 133.19929766654968,
+          "avg_train_time_per_round_s": 13.319929766654969
+        },
+        {
+          "client_id": "7507ed9065ba4deab6c7a73b7b69b6c3",
+          "num_examples": 27061,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 136.97532558441162,
+          "avg_train_time_per_round_s": 13.697532558441162
+        }
+      ]
+    },
+    {
+      "run": "comm_dp_eps3",
+      "dp_epsilon": 2.997382485520428,
+      "dp_noise_multiplier": 0.72998046875,
+      "rounds": 10,
+      "mb_total_all_clients": 153.762,
+      "mb_per_round_all_clients": 15.3762,
+      "training_time_s": 136.89042830467224,
+      "avg_round_s": 13.689042830467224,
+      "min_round_s": 13.265456199645996,
+      "max_round_s": 15.095093727111816,
+      "non_training_time_s": 3.3480899333953857,
+      "wall_clock_s": 185.84933066368103,
+      "client_failures": 0,
+      "clients": [
+        {
+          "client_id": "1d14137104eb4407b029e2ab9cfe1067",
+          "num_examples": 25960,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 129.6932406425476,
+          "avg_train_time_per_round_s": 12.96932406425476
+        },
+        {
+          "client_id": "0fa2ce0039ff4b42883999581a7d6263",
+          "num_examples": 27061,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 133.54233837127686,
+          "avg_train_time_per_round_s": 13.354233837127685
+        }
+      ]
+    },
+    {
+      "run": "comm_dp_eps1",
+      "dp_epsilon": 0.9972509450386502,
+      "dp_noise_multiplier": 1.162109375,
+      "rounds": 10,
+      "mb_total_all_clients": 153.762,
+      "mb_per_round_all_clients": 15.3762,
+      "training_time_s": 139.6763632297516,
+      "avg_round_s": 13.967636322975158,
+      "min_round_s": 13.515610694885254,
+      "max_round_s": 15.293898344039917,
+      "non_training_time_s": 3.3340654373168945,
+      "wall_clock_s": 196.42476439476013,
+      "client_failures": 0,
+      "clients": [
+        {
+          "client_id": "54f04f1abe3f45369c3a35ba02bcffd4",
+          "num_examples": 25960,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 131.974956035614,
+          "avg_train_time_per_round_s": 13.197495603561402
+        },
+        {
+          "client_id": "799f4d567119444eb253fa22496640f6",
+          "num_examples": 27061,
+          "mb_received_from_server": 51.25216,
+          "mb_sent_to_server": 25.62884,
+          "mb_total": 76.881,
+          "messages_received": 20,
+          "messages_sent": 20,
+          "total_train_time_s": 136.3422977924347,
+          "avg_train_time_per_round_s": 13.63422977924347
+        }
+      ]
+    }
+  ]
+}

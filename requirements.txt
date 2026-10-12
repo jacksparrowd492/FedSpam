@@ -1,0 +1,8 @@
+flwr>=1.30
+joblib
+numpy
+pandas
+requests
+scikit-learn
+scipy
+torch

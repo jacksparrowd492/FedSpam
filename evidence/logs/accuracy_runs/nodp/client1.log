@@ -1,0 +1,149 @@
+21:13:59 | INFO | FedSpam-Shield client1 | flwr 1.30.0 | torch 2.14.1+cpu
+21:14:00 | INFO | Shared artifacts OK: TF-IDF vocabulary 5000 + 2 numeric = input_dim 5002 | velocity log1p mean 1.9618 std 0.6231
+21:14:00 | INFO | Vectorizer SHA-256 fingerprint: ca7fe05bae177bfb (must be identical on Laptop 1, 2 and 3)
+21:14:01 | INFO | Loaded client1.csv: 32451 rows -> 32451 usable | spam=24315 legit=8136
+21:14:01 | INFO | Cleaning: empty body=14, empty subject+body=0, velocity missing=0 negative=0, header_mismatch missing=0 non-binary=0
+21:14:16 | INFO | Features: 32451 x 5002 sparse CSR, density 1.6555%, built in 15.6s
+21:14:16 | INFO | Split: train 25960 (spam 19451) | validation 6491 (spam 4864)
+21:14:16 | INFO | SpamMLP: input 5002 -> 128 -> 1, dropout 0.3, 640,513 parameters, device cpu
+21:14:16 | INFO | Differential privacy: OFF (plain FedAvg local training)
+21:14:16 | INFO | Connecting to Flower server at 127.0.0.1:8099 (10 rounds, 2 local epoch(s) per round)
+21:14:16 | INFO | Server 127.0.0.1:8099 is reachable; joining federated training
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d1122b60-ed03-472e-91b2-e3ddbafd4530
+21:14:20 | INFO | ============================================================
+21:14:20 | INFO | [round 1/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:14:27 | INFO | [round 1/10] epoch 1/2 | train loss 0.5519 | train acc 0.8178 | 3.3s
+21:14:30 | INFO | [round 1/10] epoch 2/2 | train loss 0.3848 | train acc 0.8803 | 3.4s
+21:14:30 | INFO | [round 1/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message cc07762e-1596-4a3e-b717-a9a9b861d365
+21:14:31 | INFO | [round 1/10] global model on local validation (6491 samples): loss 0.3673 | acc 0.8834 | precision 0.9304 | recall 0.9126 | F1 0.9214 | TP 4439 FP 332 TN 1295 FN 425
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message a27b8607-cdeb-4b2f-9c93-d97b2e91270c
+21:14:31 | INFO | ============================================================
+21:14:31 | INFO | [round 2/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:14:35 | INFO | [round 2/10] epoch 1/2 | train loss 0.3497 | train acc 0.8870 | 3.6s
+21:14:38 | INFO | [round 2/10] epoch 2/2 | train loss 0.3390 | train acc 0.8880 | 3.3s
+21:14:38 | INFO | [round 2/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message d726dfac-2c9f-4e83-80fa-6535d83c8b2c
+21:14:39 | INFO | [round 2/10] global model on local validation (6491 samples): loss 0.3839 | acc 0.8886 | precision 0.9309 | recall 0.9196 | F1 0.9252 | TP 4473 FP 332 TN 1295 FN 391
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 998324f6-4e15-44d5-bb23-c1e907d4426f
+21:14:39 | INFO | ============================================================
+21:14:39 | INFO | [round 3/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:14:42 | INFO | [round 3/10] epoch 1/2 | train loss 0.3568 | train acc 0.8902 | 3.6s
+21:14:46 | INFO | [round 3/10] epoch 2/2 | train loss 0.3342 | train acc 0.8912 | 3.3s
+21:14:46 | INFO | [round 3/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 7e5f3756-431f-4024-87e8-a225fbbb3e41
+21:14:46 | INFO | [round 3/10] global model on local validation (6491 samples): loss 0.4043 | acc 0.8922 | precision 0.9327 | recall 0.9227 | F1 0.9277 | TP 4488 FP 324 TN 1303 FN 376
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 606e3a36-0dc5-4771-bd8c-6b5aa334e8d6
+21:14:46 | INFO | ============================================================
+21:14:46 | INFO | [round 4/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:14:50 | INFO | [round 4/10] epoch 1/2 | train loss 0.3656 | train acc 0.8919 | 3.5s
+21:14:53 | INFO | [round 4/10] epoch 2/2 | train loss 0.3330 | train acc 0.8913 | 3.4s
+21:14:53 | INFO | [round 4/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 3370264c-a77a-4eff-b225-ed487baee274
+21:14:53 | INFO | [round 4/10] global model on local validation (6491 samples): loss 0.4186 | acc 0.8932 | precision 0.9335 | recall 0.9233 | F1 0.9284 | TP 4491 FP 320 TN 1307 FN 373
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d6964a25-a693-44df-b474-583dcfd8ef94
+21:14:53 | INFO | ============================================================
+21:14:53 | INFO | [round 5/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:14:57 | INFO | [round 5/10] epoch 1/2 | train loss 0.3719 | train acc 0.8930 | 3.4s
+21:15:00 | INFO | [round 5/10] epoch 2/2 | train loss 0.3327 | train acc 0.8923 | 3.5s
+21:15:00 | INFO | [round 5/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 945d22ac-fba1-45e8-b52e-0c564f0fed4c
+21:15:01 | INFO | [round 5/10] global model on local validation (6491 samples): loss 0.4271 | acc 0.8937 | precision 0.9337 | recall 0.9237 | F1 0.9287 | TP 4493 FP 319 TN 1308 FN 371
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message cb6318e6-be14-46c9-850f-392c4ffcd3e5
+21:15:01 | INFO | ============================================================
+21:15:01 | INFO | [round 6/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:15:05 | INFO | [round 6/10] epoch 1/2 | train loss 0.3745 | train acc 0.8934 | 4.3s
+21:15:09 | INFO | [round 6/10] epoch 2/2 | train loss 0.3331 | train acc 0.8930 | 3.6s
+21:15:09 | INFO | [round 6/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 499e4bef-ff0e-439d-996c-6cee4a95390f
+21:15:09 | INFO | [round 6/10] global model on local validation (6491 samples): loss 0.4353 | acc 0.8942 | precision 0.9339 | recall 0.9241 | F1 0.9290 | TP 4495 FP 318 TN 1309 FN 369
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 442b7a36-6567-48c2-a9b0-c95d57e8255e
+21:15:09 | INFO | ============================================================
+21:15:09 | INFO | [round 7/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:15:12 | INFO | [round 7/10] epoch 1/2 | train loss 0.3781 | train acc 0.8938 | 3.4s
+21:15:16 | INFO | [round 7/10] epoch 2/2 | train loss 0.3319 | train acc 0.8934 | 3.2s
+21:15:16 | INFO | [round 7/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 2e69dfce-ff4b-40ce-8915-05bddc528d29
+21:15:16 | INFO | [round 7/10] global model on local validation (6491 samples): loss 0.4419 | acc 0.8946 | precision 0.9342 | recall 0.9245 | F1 0.9293 | TP 4497 FP 317 TN 1310 FN 367
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message e0e451eb-52e1-4883-82ca-f5af2795db8f
+21:15:16 | INFO | ============================================================
+21:15:16 | INFO | [round 8/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:15:20 | INFO | [round 8/10] epoch 1/2 | train loss 0.3784 | train acc 0.8943 | 3.5s
+21:15:23 | INFO | [round 8/10] epoch 2/2 | train loss 0.3314 | train acc 0.8940 | 3.3s
+21:15:23 | INFO | [round 8/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 4e604fd2-37ac-4f62-a806-c8d8a9770fe0
+21:15:23 | INFO | [round 8/10] global model on local validation (6491 samples): loss 0.4488 | acc 0.8945 | precision 0.9341 | recall 0.9243 | F1 0.9292 | TP 4496 FP 317 TN 1310 FN 368
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message c453054b-43ac-4cb5-a458-db52134d2b12
+21:15:23 | INFO | ============================================================
+21:15:23 | INFO | [round 9/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:15:26 | INFO | [round 9/10] epoch 1/2 | train loss 0.3817 | train acc 0.8941 | 3.2s
+21:15:29 | INFO | [round 9/10] epoch 2/2 | train loss 0.3317 | train acc 0.8941 | 3.1s
+21:15:29 | INFO | [round 9/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 511721cc-b6c7-4d5b-8c6a-1171bc3cf395
+21:15:30 | INFO | [round 9/10] global model on local validation (6491 samples): loss 0.4557 | acc 0.8943 | precision 0.9341 | recall 0.9241 | F1 0.9291 | TP 4495 FP 317 TN 1310 FN 369
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 058aaa74-f060-4003-b2ff-0ee7d5bdd38a
+21:15:30 | INFO | ============================================================
+21:15:30 | INFO | [round 10/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:15:33 | INFO | [round 10/10] epoch 1/2 | train loss 0.3864 | train acc 0.8948 | 3.4s
+21:15:36 | INFO | [round 10/10] epoch 2/2 | train loss 0.3329 | train acc 0.8943 | 3.1s
+21:15:36 | INFO | [round 10/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 3719da3f-b12d-4ba1-8f14-3011c31636aa
+21:15:37 | INFO | [round 10/10] global model on local validation (6491 samples): loss 0.4621 | acc 0.8942 | precision 0.9341 | recall 0.9239 | F1 0.9290 | TP 4494 FP 317 TN 1310 FN 370
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: reconnect message b309d537-9f69-4235-bdd0-fde95d8e6f49
+[92mINFO [0m:      Disconnect and shut down
+21:15:37 | INFO | Server ended the session. Rounds trained: 10, evaluated: 10

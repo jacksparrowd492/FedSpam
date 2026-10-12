@@ -1,0 +1,267 @@
+{
+  "run": "comm_dp_eps8",
+  "num_rounds": 10,
+  "rounds": [
+    {
+      "round": 1,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 14.257130861282349
+        },
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 14.633063554763794
+        }
+      },
+      "failures": 0,
+      "duration_s": 15.139004468917847,
+      "fit_phase_s": 14.819230079650879,
+      "evaluate_phase_s": 0.2132554054260254,
+      "max_client_train_time_s": 14.633063554763794,
+      "start_offset_s": 49.61224031448364
+    },
+    {
+      "round": 2,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.35546350479126
+        },
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.030148029327393
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.684730529785156,
+      "fit_phase_s": 13.419277906417847,
+      "evaluate_phase_s": 0.1912376880645752,
+      "max_client_train_time_s": 13.35546350479126,
+      "start_offset_s": 64.75278449058533
+    },
+    {
+      "round": 3,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.836510181427002
+        },
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.182688474655151
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.499043941497803,
+      "fit_phase_s": 13.262737035751343,
+      "evaluate_phase_s": 0.1663813591003418,
+      "max_client_train_time_s": 13.182688474655151,
+      "start_offset_s": 78.43952250480652
+    },
+    {
+      "round": 4,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.208833456039429
+        },
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.797777652740479
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.52233076095581,
+      "fit_phase_s": 13.265671730041504,
+      "evaluate_phase_s": 0.18599271774291992,
+      "max_client_train_time_s": 13.208833456039429,
+      "start_offset_s": 91.94222617149353
+    },
+    {
+      "round": 5,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.815149307250977
+        },
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.206576824188232
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.518641471862793,
+      "fit_phase_s": 13.276242017745972,
+      "evaluate_phase_s": 0.17782831192016602,
+      "max_client_train_time_s": 13.206576824188232,
+      "start_offset_s": 105.46656274795532
+    },
+    {
+      "round": 6,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.045987129211426
+        },
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.404557466506958
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.764705419540405,
+      "fit_phase_s": 13.489457130432129,
+      "evaluate_phase_s": 0.20489788055419922,
+      "max_client_train_time_s": 13.404557466506958,
+      "start_offset_s": 118.98922896385193
+    },
+    {
+      "round": 7,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.766671180725098
+        },
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.43248438835144
+        }
+      },
+      "failures": 0,
+      "duration_s": 14.116880655288696,
+      "fit_phase_s": 13.843973398208618,
+      "evaluate_phase_s": 0.20049667358398438,
+      "max_client_train_time_s": 13.766671180725098,
+      "start_offset_s": 132.75812768936157
+    },
+    {
+      "round": 8,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 14.380757808685303
+        },
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.950362920761108
+        }
+      },
+      "failures": 0,
+      "duration_s": 14.69279408454895,
+      "fit_phase_s": 14.458661079406738,
+      "evaluate_phase_s": 0.16788005828857422,
+      "max_client_train_time_s": 14.380757808685303,
+      "start_offset_s": 146.8790361881256
+    },
+    {
+      "round": 9,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.868839740753174
+        },
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.480713129043579
+        }
+      },
+      "failures": 0,
+      "duration_s": 14.214688301086426,
+      "fit_phase_s": 13.932218313217163,
+      "evaluate_phase_s": 0.20687532424926758,
+      "max_client_train_time_s": 13.868839740753174,
+      "start_offset_s": 161.57584953308105
+    },
+    {
+      "round": 10,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "79890a0ba374409e8528840a9590c3e9": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.55303406715393
+        },
+        "7507ed9065ba4deab6c7a73b7b69b6c3": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.967873573303223
+        }
+      },
+      "failures": 0,
+      "duration_s": 14.31142282485962,
+      "fit_phase_s": 14.042290449142456,
+      "evaluate_phase_s": 0.20426154136657715,
+      "max_client_train_time_s": 13.967873573303223,
+      "start_offset_s": 175.79455256462097
+    }
+  ],
+  "clients": {
+    "79890a0ba374409e8528840a9590c3e9": {
+      "num_examples": 25960,
+      "bytes_received_from_server": 51252160,
+      "bytes_sent_to_server": 25628840,
+      "messages_received": 20,
+      "messages_sent": 20,
+      "train_time_s": 133.19929766654968
+    },
+    "7507ed9065ba4deab6c7a73b7b69b6c3": {
+      "num_examples": 27061,
+      "bytes_received_from_server": 51252160,
+      "bytes_sent_to_server": 25628840,
+      "messages_received": 20,
+      "messages_sent": 20,
+      "train_time_s": 136.97532558441162
+    }
+  },
+  "totals": {
+    "rounds_completed": 10,
+    "bytes_down": 102504320,
+    "bytes_up": 51257680,
+    "bytes_total": 153762000,
+    "training_time_s": 140.4642424583435,
+    "avg_round_s": 14.04642424583435,
+    "min_round_s": 13.499043941497803,
+    "max_round_s": 15.139004468917847,
+    "non_training_time_s": 3.4889168739318848,
+    "client_failures": 0,
+    "wall_clock_s": 190.14019417762756
+  }
+}

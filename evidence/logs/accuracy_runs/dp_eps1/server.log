@@ -1,0 +1,272 @@
+21:20:53 | INFO | Initial weights: random (seed 42)
+21:20:53 | INFO | Model: input_dim=5002, hidden_dim=128, 640,513 parameters
+21:20:53 | INFO | Starting Flower server on 127.0.0.1:8099 | 10 rounds | waiting for 2 clients
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=10, round_timeout=600.0s
+[92mINFO [0m:      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+21:20:53 | INFO | ============================================================
+21:20:53 | INFO | Round 1/10 | clients connected: 0/2
+21:20:53 | INFO | Waiting for 2 more client(s) to connect...
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:21:27 | INFO | Round 1: received 2 result(s), 0 failure(s)
+21:21:27 | INFO | Round 1: client 1 (25960 samples) trained with DP-SGD | epsilon so far 0.603 | delta 1e-05 | noise multiplier 1.1621
+21:21:27 | INFO | Round 1: client 2 (27061 samples) trained with DP-SGD | epsilon so far 0.604 | delta 1e-05 | noise multiplier 1.1475
+21:21:27 | INFO | Round 1: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:21:27 | INFO | Round 1: eval loss 0.6024 | accuracy 0.8479 | f1 0.8436 | precision 0.8742 | recall 0.8178
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+21:21:27 | INFO | ============================================================
+21:21:27 | INFO | Round 2/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:21:37 | INFO | Round 2: received 2 result(s), 0 failure(s)
+21:21:37 | INFO | Round 2: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.647 | delta 1e-05 | noise multiplier 1.1475
+21:21:37 | INFO | Round 2: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.646 | delta 1e-05 | noise multiplier 1.1621
+21:21:37 | INFO | Round 2: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:21:37 | INFO | Round 2: eval loss 0.4766 | accuracy 0.8371 | f1 0.8310 | precision 0.8724 | recall 0.7963
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+21:21:37 | INFO | ============================================================
+21:21:37 | INFO | Round 3/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:21:50 | INFO | Round 3: received 2 result(s), 0 failure(s)
+21:21:50 | INFO | Round 3: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.691 | delta 1e-05 | noise multiplier 1.1475
+21:21:50 | INFO | Round 3: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.689 | delta 1e-05 | noise multiplier 1.1621
+21:21:50 | INFO | Round 3: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:21:50 | INFO | Round 3: eval loss 0.3904 | accuracy 0.8767 | f1 0.8759 | precision 0.8728 | recall 0.8819
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+21:21:50 | INFO | ============================================================
+21:21:50 | INFO | Round 4/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:22:04 | INFO | Round 4: received 2 result(s), 0 failure(s)
+21:22:04 | INFO | Round 4: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.735 | delta 1e-05 | noise multiplier 1.1475
+21:22:04 | INFO | Round 4: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.732 | delta 1e-05 | noise multiplier 1.1621
+21:22:04 | INFO | Round 4: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:22:04 | INFO | Round 4: eval loss 0.3603 | accuracy 0.8732 | f1 0.8718 | precision 0.8649 | recall 0.8821
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+21:22:04 | INFO | ============================================================
+21:22:04 | INFO | Round 5/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:22:17 | INFO | Round 5: received 2 result(s), 0 failure(s)
+21:22:17 | INFO | Round 5: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.779 | delta 1e-05 | noise multiplier 1.1475
+21:22:17 | INFO | Round 5: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.775 | delta 1e-05 | noise multiplier 1.1621
+21:22:17 | INFO | Round 5: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:22:17 | INFO | Round 5: eval loss 0.3585 | accuracy 0.8740 | f1 0.8726 | precision 0.8651 | recall 0.8836
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 6]
+21:22:17 | INFO | ============================================================
+21:22:17 | INFO | Round 6/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:22:32 | INFO | Round 6: received 2 result(s), 0 failure(s)
+21:22:32 | INFO | Round 6: client 1 (25960 samples) trained with DP-SGD | epsilon so far 0.818 | delta 1e-05 | noise multiplier 1.1621
+21:22:32 | INFO | Round 6: client 2 (27061 samples) trained with DP-SGD | epsilon so far 0.822 | delta 1e-05 | noise multiplier 1.1475
+21:22:32 | INFO | Round 6: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:22:32 | INFO | Round 6: eval loss 0.3658 | accuracy 0.8749 | f1 0.8739 | precision 0.8651 | recall 0.8864
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 7]
+21:22:32 | INFO | ============================================================
+21:22:32 | INFO | Round 7/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:22:47 | INFO | Round 7: received 2 result(s), 0 failure(s)
+21:22:47 | INFO | Round 7: client 1 (25960 samples) trained with DP-SGD | epsilon so far 0.861 | delta 1e-05 | noise multiplier 1.1621
+21:22:47 | INFO | Round 7: client 2 (27061 samples) trained with DP-SGD | epsilon so far 0.866 | delta 1e-05 | noise multiplier 1.1475
+21:22:47 | INFO | Round 7: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:22:47 | INFO | Round 7: eval loss 0.3747 | accuracy 0.8743 | f1 0.8731 | precision 0.8633 | recall 0.8867
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 8]
+21:22:47 | INFO | ============================================================
+21:22:47 | INFO | Round 8/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:23:02 | INFO | Round 8: received 2 result(s), 0 failure(s)
+21:23:02 | INFO | Round 8: client 1 (25960 samples) trained with DP-SGD | epsilon so far 0.904 | delta 1e-05 | noise multiplier 1.1621
+21:23:02 | INFO | Round 8: client 2 (27061 samples) trained with DP-SGD | epsilon so far 0.910 | delta 1e-05 | noise multiplier 1.1475
+21:23:02 | INFO | Round 8: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:23:02 | INFO | Round 8: eval loss 0.3829 | accuracy 0.8738 | f1 0.8725 | precision 0.8621 | recall 0.8867
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 9]
+21:23:02 | INFO | ============================================================
+21:23:02 | INFO | Round 9/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:23:18 | INFO | Round 9: received 2 result(s), 0 failure(s)
+21:23:18 | INFO | Round 9: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.954 | delta 1e-05 | noise multiplier 1.1475
+21:23:18 | INFO | Round 9: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.947 | delta 1e-05 | noise multiplier 1.1621
+21:23:18 | INFO | Round 9: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:23:18 | INFO | Round 9: eval loss 0.3902 | accuracy 0.8737 | f1 0.8724 | precision 0.8619 | recall 0.8867
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 10]
+21:23:18 | INFO | ============================================================
+21:23:18 | INFO | Round 10/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:23:31 | INFO | Round 10: received 2 result(s), 0 failure(s)
+21:23:31 | INFO | Round 10: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.997 | delta 1e-05 | noise multiplier 1.1475
+21:23:31 | INFO | Round 10: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.990 | delta 1e-05 | noise multiplier 1.1621
+21:23:31 | INFO | Round 10: global model saved to model\global_model_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:23:31 | INFO | Round 10: eval loss 0.3959 | accuracy 0.8737 | f1 0.8722 | precision 0.8612 | recall 0.8873
+[92mINFO [0m:      
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 10 round(s) in 157.80s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.6023613133967853
+[92mINFO [0m:      		round 2: 0.47655343425807134
+[92mINFO [0m:      		round 3: 0.3903719233025107
+[92mINFO [0m:      		round 4: 0.3603146718693434
+[92mINFO [0m:      		round 5: 0.3584935903378343
+[92mINFO [0m:      		round 6: 0.36579243538335965
+[92mINFO [0m:      		round 7: 0.3746711520926755
+[92mINFO [0m:      		round 8: 0.38289358580895677
+[92mINFO [0m:      		round 9: 0.39024031324570757
+[92mINFO [0m:      		round 10: 0.39585613409273496
+[92mINFO [0m:      	History (metrics, distributed, fit):
+[92mINFO [0m:      	{'dp_delta': [(1, 1e-05),
+[92mINFO [0m:      	              (2, 1e-05),
+[92mINFO [0m:      	              (3, 1e-05),
+[92mINFO [0m:      	              (4, 1e-05),
+[92mINFO [0m:      	              (5, 1e-05),
+[92mINFO [0m:      	              (6, 1e-05),
+[92mINFO [0m:      	              (7, 1e-05),
+[92mINFO [0m:      	              (8, 1e-05),
+[92mINFO [0m:      	              (9, 1e-05),
+[92mINFO [0m:      	              (10, 1e-05)],
+[92mINFO [0m:      	 'dp_epsilon': [(1, 0.6036592056999813),
+[92mINFO [0m:      	                (2, 0.6473916211820556),
+[92mINFO [0m:      	                (3, 0.69112403666413),
+[92mINFO [0m:      	                (4, 0.7348564521462043),
+[92mINFO [0m:      	                (5, 0.7785888676282786),
+[92mINFO [0m:      	                (6, 0.8223212831103529),
+[92mINFO [0m:      	                (7, 0.8660536985924272),
+[92mINFO [0m:      	                (8, 0.9097861140745016),
+[92mINFO [0m:      	                (9, 0.9535185295565758),
+[92mINFO [0m:      	                (10, 0.9972509450386502)],
+[92mINFO [0m:      	 'dp_max_grad_norm': [(1, 1.0),
+[92mINFO [0m:      	                      (2, 1.0),
+[92mINFO [0m:      	                      (3, 1.0),
+[92mINFO [0m:      	                      (4, 1.0),
+[92mINFO [0m:      	                      (5, 1.0),
+[92mINFO [0m:      	                      (6, 1.0),
+[92mINFO [0m:      	                      (7, 1.0),
+[92mINFO [0m:      	                      (8, 1.0),
+[92mINFO [0m:      	                      (9, 1.0),
+[92mINFO [0m:      	                      (10, 1.0)],
+[92mINFO [0m:      	 'dp_noise_multiplier': [(1, 1.162109375),
+[92mINFO [0m:      	                         (2, 1.162109375),
+[92mINFO [0m:      	                         (3, 1.162109375),
+[92mINFO [0m:      	                         (4, 1.162109375),
+[92mINFO [0m:      	                         (5, 1.162109375),
+[92mINFO [0m:      	                         (6, 1.162109375),
+[92mINFO [0m:      	                         (7, 1.162109375),
+[92mINFO [0m:      	                         (8, 1.162109375),
+[92mINFO [0m:      	                         (9, 1.162109375),
+[92mINFO [0m:      	                         (10, 1.162109375)],
+[92mINFO [0m:      	 'local_epochs': [(1, 2.0),
+[92mINFO [0m:      	                  (2, 2.0),
+[92mINFO [0m:      	                  (3, 2.0),
+[92mINFO [0m:      	                  (4, 2.0),
+[92mINFO [0m:      	                  (5, 2.0),
+[92mINFO [0m:      	                  (6, 2.0),
+[92mINFO [0m:      	                  (7, 2.0),
+[92mINFO [0m:      	                  (8, 2.0),
+[92mINFO [0m:      	                  (9, 2.0),
+[92mINFO [0m:      	                  (10, 2.0)],
+[92mINFO [0m:      	 'train_time_s': [(1, 12.3020963608163),
+[92mINFO [0m:      	                  (2, 10.207498280164447),
+[92mINFO [0m:      	                  (3, 12.293711458835604),
+[92mINFO [0m:      	                  (4, 13.331668255746019),
+[92mINFO [0m:      	                  (5, 12.488065628191443),
+[92mINFO [0m:      	                  (6, 14.777898278092225),
+[92mINFO [0m:      	                  (7, 14.119610370643288),
+[92mINFO [0m:      	                  (8, 14.693627353094149),
+[92mINFO [0m:      	                  (9, 14.825414892036285),
+[92mINFO [0m:      	                  (10, 12.797662711328307)]}
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.8478539639435769),
+[92mINFO [0m:      	              (2, 0.8370672097759674),
+[92mINFO [0m:      	              (3, 0.8767443614694124),
+[92mINFO [0m:      	              (4, 0.8731990646450931),
+[92mINFO [0m:      	              (5, 0.8739533831183526),
+[92mINFO [0m:      	              (6, 0.8748585652862638),
+[92mINFO [0m:      	              (7, 0.8742551105076564),
+[92mINFO [0m:      	              (8, 0.8738025194237007),
+[92mINFO [0m:      	              (9, 0.8737270875763747),
+[92mINFO [0m:      	              (10, 0.8736516557290488)],
+[92mINFO [0m:      	 'f1': [(1, 0.84358743878393),
+[92mINFO [0m:      	        (2, 0.8309998286031176),
+[92mINFO [0m:      	        (3, 0.8758883433668737),
+[92mINFO [0m:      	        (4, 0.8717732032030295),
+[92mINFO [0m:      	        (5, 0.8726033062019347),
+[92mINFO [0m:      	        (6, 0.8739361101768635),
+[92mINFO [0m:      	        (7, 0.8731179841750024),
+[92mINFO [0m:      	        (8, 0.8724792275901403),
+[92mINFO [0m:      	        (9, 0.8723729481197295),
+[92mINFO [0m:      	        (10, 0.8722165543053378)],
+[92mINFO [0m:      	 'precision': [(1, 0.8742253475519602),
+[92mINFO [0m:      	               (2, 0.8723786416546375),
+[92mINFO [0m:      	               (3, 0.8727935944105597),
+[92mINFO [0m:      	               (4, 0.864861654535401),
+[92mINFO [0m:      	               (5, 0.8650552426108837),
+[92mINFO [0m:      	               (6, 0.8650713391609287),
+[92mINFO [0m:      	               (7, 0.8632741920004274),
+[92mINFO [0m:      	               (8, 0.8621324121115814),
+[92mINFO [0m:      	               (9, 0.8619427231625905),
+[92mINFO [0m:      	               (10, 0.8611599723986615)],
+[92mINFO [0m:      	 'recall': [(1, 0.8177981932898241),
+[92mINFO [0m:      	            (2, 0.7963111867071401),
+[92mINFO [0m:      	            (3, 0.8818973754019003),
+[92mINFO [0m:      	            (4, 0.8820987027542821),
+[92mINFO [0m:      	            (5, 0.8835889388606416),
+[92mINFO [0m:      	            (6, 0.8863884922553731),
+[92mINFO [0m:      	            (7, 0.8866904832839458),
+[92mINFO [0m:      	            (8, 0.8866904832839458),
+[92mINFO [0m:      	            (9, 0.8866904832839458),
+[92mINFO [0m:      	            (10, 0.8872543377701931)]}
+[92mINFO [0m:      
+21:23:31 | INFO | Federated training finished. Final global model: model\global_model_dp_eps1.pt

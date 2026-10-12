@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedSpam-Shield | Email Checker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #e8eef8;
+            background: #0b1120;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 760px;
+        }
+
+        .brand {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .brand h1 {
+            margin-bottom: 8px;
+            font-size: clamp(28px, 5vw, 40px);
+            letter-spacing: -1px;
+        }
+
+        .brand h1 span {
+            color: #60a5fa;
+        }
+
+        .brand p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .card {
+            padding: 28px;
+            background: #151e30;
+            border: 1px solid #29364d;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin: 18px 0 9px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 13px 14px;
+            color: #f8fafc;
+            background: #0b1220;
+            border: 1px solid #344258;
+            border-radius: 10px;
+            font: inherit;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.12);
+        }
+
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            color: #07111f;
+            background: #60a5fa;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #93c5fd;
+        }
+
+        .result {
+            margin-top: 24px;
+            padding: 20px;
+            border: 1px solid #344258;
+            border-radius: 12px;
+            background: #0b1220;
+        }
+
+        .result h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .spam {
+            color: #f87171;
+        }
+
+        .legitimate {
+            color: #4ade80;
+        }
+
+        .muted {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .error {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 10px;
+            color: #fecaca;
+            background: #451a1a;
+        }
+
+        .footer {
+            margin-top: 22px;
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 14px;
+            }
+
+            .card {
+                padding: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="brand">
+            <h1>FedSpam<span>-Shield</span></h1>
+            <p>Privacy-conscious email spam detection<br>
+               Powered by your federated global model</p>
+        </header>
+
+        <section class="card">
+            <h2>Check an email</h2>
+            <p class="muted">
+                Enter an email's subject and message to classify it.
+            </p>
+
+            <form method="POST" action="/">
+                <label for="subject">Email subject</label>
+                <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    maxlength="500"
+                    placeholder="Enter the email subject"
+                    value="{{ subject }}"
+                >
+
+                <label for="body">Email body</label>
+                <textarea
+                    id="body"
+                    name="body"
+                    maxlength="20000"
+                    placeholder="Paste the email message here"
+                >{{ body }}</textarea>
+
+                <button type="submit">Check Email</button>
+            </form>
+
+            {% if error %}
+                <div class="error" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            {% if result is not none %}
+                <div class="result" role="status">
+                    {% if result == "Spam" %}
+                        <h2 class="spam">⚠ Spam Detected</h2>
+                    {% else %}
+                        <h2 class="legitimate">✓ Not Spam</h2>
+                    {% endif %}
+
+                    <p>
+                        Predicted spam probability:
+                        <strong>{{ "%.2f"|format(probability) }}%</strong>
+                    </p>
+
+                    <p class="muted">
+                        This is a model prediction, not a guarantee.
+                        Review suspicious emails carefully before opening
+                        links, attachments, or sharing personal information.
+                    </p>
+                </div>
+            {% endif %}
+        </section>
+
+        <footer class="footer">
+            FedSpam-Shield · Federated learning email classification
+        </footer>
+    </main>
+</body>
+</html>

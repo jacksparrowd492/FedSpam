@@ -1,0 +1,148 @@
+21:50:37 | INFO | FedSpam-Shield client1 | flwr 1.30.0 | torch 2.14.1+cpu
+21:50:37 | INFO | Shared artifacts OK: TF-IDF vocabulary 5000 + 2 numeric = input_dim 5002 | velocity log1p mean 1.9618 std 0.6231
+21:50:37 | INFO | Vectorizer SHA-256 fingerprint: ca7fe05bae177bfb (must be identical on Laptop 1, 2 and 3)
+21:50:39 | INFO | Loaded client1.csv: 32451 rows -> 32451 usable | spam=24315 legit=8136
+21:50:39 | INFO | Cleaning: empty body=14, empty subject+body=0, velocity missing=0 negative=0, header_mismatch missing=0 non-binary=0
+21:50:52 | INFO | Features: 32451 x 5002 sparse CSR, density 1.6555%, built in 13.5s
+21:50:52 | INFO | Split: train 25960 (spam 19451) | validation 6491 (spam 4864)
+21:50:52 | INFO | SpamMLP: input 5002 -> 128 -> 1, dropout 0.3, 640,513 parameters, device cpu
+21:50:54 | INFO | Differential privacy: ON (DP-SGD) | noise multiplier 1.1621 | clip norm 1.0 | delta 1e-05 | sample rate 0.00247 | planned steps 8120 (10 rounds x 2 epochs) | target epsilon 1.0
+21:50:54 | INFO | Connecting to Flower server at 127.0.0.1:8099 (10 rounds, 2 local epoch(s) per round)
+21:50:54 | INFO | Server 127.0.0.1:8099 is reachable; joining federated training
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+10/12/2026 21:50:54:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+10/12/2026 21:50:54:DEBUG:Using InMemoryObjectStore
+10/12/2026 21:50:54:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+10/12/2026 21:50:54:DEBUG:ChannelConnectivity.IDLE
+10/12/2026 21:50:54:DEBUG:ChannelConnectivity.CONNECTING
+10/12/2026 21:50:54:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+10/12/2026 21:51:19:INFO:
+[92mINFO [0m:      Received: train message 45d47953-c662-437b-b479-9dccf93fef81
+10/12/2026 21:51:19:INFO:Received: train message 45d47953-c662-437b-b479-9dccf93fef81
+21:51:19 | INFO | ============================================================
+21:51:19 | INFO | [round 1/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:51:27 | INFO | [round 1/10] epoch 1/2 | train loss 0.6586 | train acc 0.7444 | DP epsilon so far 0.563 (delta 1e-05) | 6.4s
+21:51:33 | INFO | [round 1/10] epoch 2/2 | train loss 0.6113 | train acc 0.7505 | DP epsilon so far 0.603 (delta 1e-05) | 6.5s
+21:51:33 | INFO | [round 1/10] DP budget spent so far: epsilon 0.603, delta 1e-05
+21:51:33 | INFO | [round 1/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:51:33:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:51:34:INFO:
+[92mINFO [0m:      Received: evaluate message 00a24985-aa21-4d3e-a019-95581936ac00
+10/12/2026 21:51:34:INFO:Received: evaluate message 00a24985-aa21-4d3e-a019-95581936ac00
+21:51:34 | INFO | [round 1/10] global model on local validation (6491 samples): loss 0.6250 | acc 0.7854 | precision 0.9153 | recall 0.7864 | F1 0.8460 | TP 3825 FP 354 TN 1273 FN 1039
+[92mINFO [0m:      Sent reply
+10/12/2026 21:51:34:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:51:34:INFO:
+[92mINFO [0m:      Received: train message d099a184-42f9-491c-b53b-7e7b64fe702a
+10/12/2026 21:51:34:INFO:Received: train message d099a184-42f9-491c-b53b-7e7b64fe702a
+21:51:34 | INFO | ============================================================
+21:51:34 | INFO | [round 2/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:51:41 | INFO | [round 2/10] epoch 1/2 | train loss 0.5882 | train acc 0.8333 | DP epsilon so far 0.624 (delta 1e-05) | 6.8s
+[91mERROR [0m:     Client raised an exception.
+Traceback (most recent call last):
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\compat\client\app.py", line 459, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 144, in __call__
+    return self._call(message, context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 128, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\client1.py", line 160, in fit
+    train_local_dp(self.model, self.X_train, self.y_train, dp=self.dp, accountant=self.accountant,
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\fedspam_common.py", line 419, in train_local_dp
+    xb = torch.from_numpy(X[idx].toarray()).to(device)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_compressed.py", line 1167, in toarray
+    out = self._process_toarray_args(order, out)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_base.py", line 1354, in _process_toarray_args
+    return np.zeros(self.shape, dtype=self.dtype, order=order)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.35 MiB for an array with shape (71, 5002) and data type float32
+10/12/2026 21:51:48:ERROR:Client raised an exception.
+Traceback (most recent call last):
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\compat\client\app.py", line 459, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 144, in __call__
+    return self._call(message, context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 128, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\client1.py", line 160, in fit
+    train_local_dp(self.model, self.X_train, self.y_train, dp=self.dp, accountant=self.accountant,
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\fedspam_common.py", line 419, in train_local_dp
+    xb = torch.from_numpy(X[idx].toarray()).to(device)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_compressed.py", line 1167, in toarray
+    out = self._process_toarray_args(order, out)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_base.py", line 1354, in _process_toarray_args
+    return np.zeros(self.shape, dtype=self.dtype, order=order)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.35 MiB for an array with shape (71, 5002) and data type float32
+10/12/2026 21:51:48:DEBUG:gRPC channel closed
+21:51:48 | ERROR | Client stopped with an unexpected error: Unable to allocate 1.35 MiB for an array with shape (71, 5002) and data type float32
+Traceback (most recent call last):
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\client1.py", line 362, in main
+    return run(client, args)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\client1.py", line 258, in run
+    fl.client.start_client(server_address=f"{host}:{port}", client=client.to_client(),
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\compat\client\app.py", line 180, in start_client
+    start_client_internal(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\compat\client\app.py", line 466, in start_client_internal
+    raise ex
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\compat\client\app.py", line 459, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 144, in __call__
+    return self._call(message, context)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\clientapp\client_app.py", line 128, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\flwr\client\numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\client1.py", line 160, in fit
+    train_local_dp(self.model, self.X_train, self.y_train, dp=self.dp, accountant=self.accountant,
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\fedspam_common.py", line 419, in train_local_dp
+    xb = torch.from_numpy(X[idx].toarray()).to(device)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_compressed.py", line 1167, in toarray
+    out = self._process_toarray_args(order, out)
+  File "F:\Files\DPSA LAB\CAT-2\Client-1\.venv\lib\site-packages\scipy\sparse\_base.py", line 1354, in _process_toarray_args
+    return np.zeros(self.shape, dtype=self.dtype, order=order)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.35 MiB for an array with shape (71, 5002) and data type float32

@@ -1,0 +1,21 @@
+{
+  "transform": "log1p_standard",
+  "formula": "(log1p(velocity) - mean) / std",
+  "mean": 1.9617544886630538,
+  "std": 0.6230636511567262,
+  "fill_value": 7.0,
+  "n_tfidf_features": 5000,
+  "input_dim": 5002,
+  "feature_order": [
+    "tfidf[0..4999]",
+    "velocity_scaled",
+    "header_mismatch"
+  ],
+  "text": "f\"{subject} {body}\".strip()",
+  "vectorizer_sha256": "ca7fe05bae177bfb54eaf090438418e061feb704c9b85f6a5964b93f3193e42e",
+  "sklearn_version": "1.7.2",
+  "reference_files": [
+    "client1.csv"
+  ],
+  "created_utc": "2026-10-12T06:06:21+00:00"
+}

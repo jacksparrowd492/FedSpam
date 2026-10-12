@@ -1,0 +1,4 @@
+=== comm_dp_eps1 start 21:52:17
+Communication: 153.76 MB total over 10 rounds (102.50 MB down, 51.26 MB up) | training time 139.7s, avg round 14.0s | saved to model\communication_comm_dp_eps1.json
+=== comm_dp_eps1 end 21:55:42 (exit codes server 0, client1 0, client2 0)
+SWEEP DONE

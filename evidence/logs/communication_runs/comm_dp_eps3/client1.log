@@ -1,0 +1,242 @@
+21:47:21 | INFO | FedSpam-Shield client1 | flwr 1.30.0 | torch 2.14.1+cpu
+21:47:21 | INFO | Shared artifacts OK: TF-IDF vocabulary 5000 + 2 numeric = input_dim 5002 | velocity log1p mean 1.9618 std 0.6231
+21:47:21 | INFO | Vectorizer SHA-256 fingerprint: ca7fe05bae177bfb (must be identical on Laptop 1, 2 and 3)
+21:47:22 | INFO | Loaded client1.csv: 32451 rows -> 32451 usable | spam=24315 legit=8136
+21:47:22 | INFO | Cleaning: empty body=14, empty subject+body=0, velocity missing=0 negative=0, header_mismatch missing=0 non-binary=0
+21:47:34 | INFO | Features: 32451 x 5002 sparse CSR, density 1.6555%, built in 11.4s
+21:47:34 | INFO | Split: train 25960 (spam 19451) | validation 6491 (spam 4864)
+21:47:34 | INFO | SpamMLP: input 5002 -> 128 -> 1, dropout 0.3, 640,513 parameters, device cpu
+21:47:37 | INFO | Differential privacy: ON (DP-SGD) | noise multiplier 0.7300 | clip norm 1.0 | delta 1e-05 | sample rate 0.00247 | planned steps 8120 (10 rounds x 2 epochs) | target epsilon 3.0
+21:47:37 | INFO | Connecting to Flower server at 127.0.0.1:8099 (10 rounds, 2 local epoch(s) per round)
+21:47:37 | INFO | Server 127.0.0.1:8099 is reachable; joining federated training
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+10/12/2026 21:47:37:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+10/12/2026 21:47:37:DEBUG:Using InMemoryObjectStore
+10/12/2026 21:47:37:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+10/12/2026 21:47:37:DEBUG:ChannelConnectivity.IDLE
+10/12/2026 21:47:37:DEBUG:ChannelConnectivity.CONNECTING
+10/12/2026 21:47:37:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+10/12/2026 21:48:03:INFO:
+[92mINFO [0m:      Received: train message 2261e47b-719a-43af-8280-c98900e7a850
+10/12/2026 21:48:03:INFO:Received: train message 2261e47b-719a-43af-8280-c98900e7a850
+21:48:03 | INFO | ============================================================
+21:48:03 | INFO | [round 1/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:48:11 | INFO | [round 1/10] epoch 1/2 | train loss 0.6522 | train acc 0.7475 | DP epsilon so far 1.824 (delta 1e-05) | 6.5s
+21:48:17 | INFO | [round 1/10] epoch 2/2 | train loss 0.5801 | train acc 0.7631 | DP epsilon so far 1.937 (delta 1e-05) | 6.3s
+21:48:17 | INFO | [round 1/10] DP budget spent so far: epsilon 1.937, delta 1e-05
+21:48:17 | INFO | [round 1/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:17:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:18:INFO:
+[92mINFO [0m:      Received: evaluate message 6ec8fe4f-b79b-4fb7-8878-e9411ecf4330
+10/12/2026 21:48:18:INFO:Received: evaluate message 6ec8fe4f-b79b-4fb7-8878-e9411ecf4330
+21:48:18 | INFO | [round 1/10] global model on local validation (6491 samples): loss 0.5949 | acc 0.7812 | precision 0.9151 | recall 0.7804 | F1 0.8424 | TP 3796 FP 352 TN 1275 FN 1068
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:18:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:18:INFO:
+[92mINFO [0m:      Received: train message 8b7c8e96-d3bc-42c4-b239-1079d559af0b
+10/12/2026 21:48:18:INFO:Received: train message 8b7c8e96-d3bc-42c4-b239-1079d559af0b
+21:48:18 | INFO | ============================================================
+21:48:18 | INFO | [round 2/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:48:24 | INFO | [round 2/10] epoch 1/2 | train loss 0.5441 | train acc 0.8312 | DP epsilon so far 2.025 (delta 1e-05) | 6.3s
+21:48:31 | INFO | [round 2/10] epoch 2/2 | train loss 0.4619 | train acc 0.8428 | DP epsilon so far 2.100 (delta 1e-05) | 6.5s
+21:48:31 | INFO | [round 2/10] DP budget spent so far: epsilon 2.100, delta 1e-05
+21:48:31 | INFO | [round 2/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:31:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:32:INFO:
+[92mINFO [0m:      Received: evaluate message a8b1bdc0-431c-4626-9e6a-59189a07e12f
+10/12/2026 21:48:32:INFO:Received: evaluate message a8b1bdc0-431c-4626-9e6a-59189a07e12f
+21:48:32 | INFO | [round 2/10] global model on local validation (6491 samples): loss 0.4885 | acc 0.8299 | precision 0.9146 | recall 0.8526 | F1 0.8825 | TP 4147 FP 387 TN 1240 FN 717
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:32:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:32:INFO:
+[92mINFO [0m:      Received: train message 22c88c65-e88c-496a-a133-7c0f1cd11937
+10/12/2026 21:48:32:INFO:Received: train message 22c88c65-e88c-496a-a133-7c0f1cd11937
+21:48:32 | INFO | ============================================================
+21:48:32 | INFO | [round 3/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:48:38 | INFO | [round 3/10] epoch 1/2 | train loss 0.4474 | train acc 0.8340 | DP epsilon so far 2.172 (delta 1e-05) | 6.4s
+21:48:45 | INFO | [round 3/10] epoch 2/2 | train loss 0.4104 | train acc 0.8438 | DP epsilon so far 2.237 (delta 1e-05) | 6.4s
+21:48:45 | INFO | [round 3/10] DP budget spent so far: epsilon 2.237, delta 1e-05
+21:48:45 | INFO | [round 3/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:45:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:45:INFO:
+[92mINFO [0m:      Received: evaluate message e515e993-b911-4dcc-b50e-b6b3bbbf4f11
+10/12/2026 21:48:45:INFO:Received: evaluate message e515e993-b911-4dcc-b50e-b6b3bbbf4f11
+21:48:45 | INFO | [round 3/10] global model on local validation (6491 samples): loss 0.4619 | acc 0.8291 | precision 0.9124 | recall 0.8540 | F1 0.8822 | TP 4154 FP 399 TN 1228 FN 710
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:45:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:45:INFO:
+[92mINFO [0m:      Received: train message b9a4e383-f272-42b7-91f3-266c455d2838
+10/12/2026 21:48:45:INFO:Received: train message b9a4e383-f272-42b7-91f3-266c455d2838
+21:48:45 | INFO | ============================================================
+21:48:45 | INFO | [round 4/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:48:52 | INFO | [round 4/10] epoch 1/2 | train loss 0.4401 | train acc 0.8357 | DP epsilon so far 2.302 (delta 1e-05) | 6.4s
+21:48:58 | INFO | [round 4/10] epoch 2/2 | train loss 0.4146 | train acc 0.8478 | DP epsilon so far 2.361 (delta 1e-05) | 6.3s
+21:48:58 | INFO | [round 4/10] DP budget spent so far: epsilon 2.361, delta 1e-05
+21:48:58 | INFO | [round 4/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:58:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:59:INFO:
+[92mINFO [0m:      Received: evaluate message d4df3e1f-1203-4916-8b38-dd8c1582c9d2
+10/12/2026 21:48:59:INFO:Received: evaluate message d4df3e1f-1203-4916-8b38-dd8c1582c9d2
+21:48:59 | INFO | [round 4/10] global model on local validation (6491 samples): loss 0.4809 | acc 0.8301 | precision 0.9116 | recall 0.8563 | F1 0.8831 | TP 4165 FP 404 TN 1223 FN 699
+[92mINFO [0m:      Sent reply
+10/12/2026 21:48:59:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:48:59:INFO:
+[92mINFO [0m:      Received: train message b4fa8bc1-bc1f-40e1-b23a-9ab8bb01f227
+10/12/2026 21:48:59:INFO:Received: train message b4fa8bc1-bc1f-40e1-b23a-9ab8bb01f227
+21:48:59 | INFO | ============================================================
+21:48:59 | INFO | [round 5/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:49:05 | INFO | [round 5/10] epoch 1/2 | train loss 0.4708 | train acc 0.8366 | DP epsilon so far 2.421 (delta 1e-05) | 6.3s
+21:49:11 | INFO | [round 5/10] epoch 2/2 | train loss 0.4592 | train acc 0.8435 | DP epsilon so far 2.479 (delta 1e-05) | 6.3s
+21:49:11 | INFO | [round 5/10] DP budget spent so far: epsilon 2.479, delta 1e-05
+21:49:11 | INFO | [round 5/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:11:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:12:INFO:
+[92mINFO [0m:      Received: evaluate message 0c78b795-45f9-423e-8623-08cf2356a772
+10/12/2026 21:49:12:INFO:Received: evaluate message 0c78b795-45f9-423e-8623-08cf2356a772
+21:49:12 | INFO | [round 5/10] global model on local validation (6491 samples): loss 0.5081 | acc 0.8299 | precision 0.9114 | recall 0.8563 | F1 0.8830 | TP 4165 FP 405 TN 1222 FN 699
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:12:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:12:INFO:
+[92mINFO [0m:      Received: train message 9dd2a701-0351-4abb-a570-121227e175c7
+10/12/2026 21:49:12:INFO:Received: train message 9dd2a701-0351-4abb-a570-121227e175c7
+21:49:12 | INFO | ============================================================
+21:49:12 | INFO | [round 6/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:49:19 | INFO | [round 6/10] epoch 1/2 | train loss 0.4879 | train acc 0.8410 | DP epsilon so far 2.534 (delta 1e-05) | 7.0s
+21:49:26 | INFO | [round 6/10] epoch 2/2 | train loss 0.4735 | train acc 0.8449 | DP epsilon so far 2.588 (delta 1e-05) | 6.6s
+21:49:26 | INFO | [round 6/10] DP budget spent so far: epsilon 2.588, delta 1e-05
+21:49:26 | INFO | [round 6/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:26:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:26:INFO:
+[92mINFO [0m:      Received: evaluate message 105f96a2-ca92-4779-beac-020c191a14e8
+10/12/2026 21:49:26:INFO:Received: evaluate message 105f96a2-ca92-4779-beac-020c191a14e8
+21:49:26 | INFO | [round 6/10] global model on local validation (6491 samples): loss 0.5310 | acc 0.8302 | precision 0.9112 | recall 0.8569 | F1 0.8832 | TP 4168 FP 406 TN 1221 FN 696
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:26:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:27:INFO:
+[92mINFO [0m:      Received: train message 24cc9cc6-ec82-4dad-8d78-6a790a8c23ee
+10/12/2026 21:49:27:INFO:Received: train message 24cc9cc6-ec82-4dad-8d78-6a790a8c23ee
+21:49:27 | INFO | ============================================================
+21:49:27 | INFO | [round 7/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:49:33 | INFO | [round 7/10] epoch 1/2 | train loss 0.5192 | train acc 0.8385 | DP epsilon so far 2.643 (delta 1e-05) | 6.4s
+21:49:39 | INFO | [round 7/10] epoch 2/2 | train loss 0.4974 | train acc 0.8459 | DP epsilon so far 2.695 (delta 1e-05) | 6.3s
+21:49:39 | INFO | [round 7/10] DP budget spent so far: epsilon 2.695, delta 1e-05
+21:49:39 | INFO | [round 7/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:39:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:40:INFO:
+[92mINFO [0m:      Received: evaluate message 8e343085-c0f6-44f5-97d9-2d63195acc2b
+10/12/2026 21:49:40:INFO:Received: evaluate message 8e343085-c0f6-44f5-97d9-2d63195acc2b
+21:49:40 | INFO | [round 7/10] global model on local validation (6491 samples): loss 0.5478 | acc 0.8313 | precision 0.9114 | recall 0.8583 | F1 0.8841 | TP 4175 FP 406 TN 1221 FN 689
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:40:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:40:INFO:
+[92mINFO [0m:      Received: train message 6faa6e0f-56f8-4b87-b92e-19702bf0559d
+10/12/2026 21:49:40:INFO:Received: train message 6faa6e0f-56f8-4b87-b92e-19702bf0559d
+21:49:40 | INFO | ============================================================
+21:49:40 | INFO | [round 8/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:49:46 | INFO | [round 8/10] epoch 1/2 | train loss 0.5382 | train acc 0.8388 | DP epsilon so far 2.746 (delta 1e-05) | 6.3s
+21:49:53 | INFO | [round 8/10] epoch 2/2 | train loss 0.5068 | train acc 0.8454 | DP epsilon so far 2.797 (delta 1e-05) | 6.2s
+21:49:53 | INFO | [round 8/10] DP budget spent so far: epsilon 2.797, delta 1e-05
+21:49:53 | INFO | [round 8/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:53:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:53:INFO:
+[92mINFO [0m:      Received: evaluate message 46eafe70-93d7-428b-9f91-a2005a23a839
+10/12/2026 21:49:53:INFO:Received: evaluate message 46eafe70-93d7-428b-9f91-a2005a23a839
+21:49:53 | INFO | [round 8/10] global model on local validation (6491 samples): loss 0.5588 | acc 0.8318 | precision 0.9114 | recall 0.8590 | F1 0.8844 | TP 4178 FP 406 TN 1221 FN 686
+[92mINFO [0m:      Sent reply
+10/12/2026 21:49:53:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:49:53:INFO:
+[92mINFO [0m:      Received: train message 549eb06d-0652-4b51-b204-6b61cacf811b
+10/12/2026 21:49:53:INFO:Received: train message 549eb06d-0652-4b51-b204-6b61cacf811b
+21:49:53 | INFO | ============================================================
+21:49:53 | INFO | [round 9/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:50:00 | INFO | [round 9/10] epoch 1/2 | train loss 0.5544 | train acc 0.8380 | DP epsilon so far 2.849 (delta 1e-05) | 6.2s
+21:50:06 | INFO | [round 9/10] epoch 2/2 | train loss 0.5149 | train acc 0.8469 | DP epsilon so far 2.899 (delta 1e-05) | 6.2s
+21:50:06 | INFO | [round 9/10] DP budget spent so far: epsilon 2.899, delta 1e-05
+21:50:06 | INFO | [round 9/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:50:06:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:50:06:INFO:
+[92mINFO [0m:      Received: evaluate message 75468bda-fae1-4002-8aa5-700a44b8f7e9
+10/12/2026 21:50:06:INFO:Received: evaluate message 75468bda-fae1-4002-8aa5-700a44b8f7e9
+21:50:07 | INFO | [round 9/10] global model on local validation (6491 samples): loss 0.5693 | acc 0.8319 | precision 0.9113 | recall 0.8594 | F1 0.8846 | TP 4180 FP 407 TN 1220 FN 684
+[92mINFO [0m:      Sent reply
+10/12/2026 21:50:07:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:50:07:INFO:
+[92mINFO [0m:      Received: train message c4702c56-f764-473c-bf3e-81581b33ea9f
+10/12/2026 21:50:07:INFO:Received: train message c4702c56-f764-473c-bf3e-81581b33ea9f
+21:50:07 | INFO | ============================================================
+21:50:07 | INFO | [round 10/10] received global model; training 2 epoch(s) on 25960 samples (batch 64, lr 0.0001)
+21:50:13 | INFO | [round 10/10] epoch 1/2 | train loss 0.5598 | train acc 0.8376 | DP epsilon so far 2.947 (delta 1e-05) | 6.2s
+21:50:19 | INFO | [round 10/10] epoch 2/2 | train loss 0.5227 | train acc 0.8456 | DP epsilon so far 2.995 (delta 1e-05) | 6.3s
+21:50:19 | INFO | [round 10/10] DP budget spent so far: epsilon 2.995, delta 1e-05
+21:50:19 | INFO | [round 10/10] sending updated weights + num_examples=25960 to the server
+[92mINFO [0m:      Sent reply
+10/12/2026 21:50:19:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:50:20:INFO:
+[92mINFO [0m:      Received: evaluate message 223d43ec-0f8d-4a7a-9111-800ee2226642
+10/12/2026 21:50:20:INFO:Received: evaluate message 223d43ec-0f8d-4a7a-9111-800ee2226642
+21:50:20 | INFO | [round 10/10] global model on local validation (6491 samples): loss 0.5724 | acc 0.8332 | precision 0.9114 | recall 0.8610 | F1 0.8855 | TP 4188 FP 407 TN 1220 FN 676
+[92mINFO [0m:      Sent reply
+10/12/2026 21:50:20:INFO:Sent reply
+[92mINFO [0m:      
+10/12/2026 21:50:20:INFO:
+[92mINFO [0m:      Received: reconnect message e5c9ccdc-0c2d-4bd5-bbd1-fc9817916e87
+10/12/2026 21:50:20:INFO:Received: reconnect message e5c9ccdc-0c2d-4bd5-bbd1-fc9817916e87
+10/12/2026 21:50:20:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+10/12/2026 21:50:20:INFO:Disconnect and shut down
+21:50:20 | INFO | Server ended the session. Rounds trained: 10, evaluated: 10

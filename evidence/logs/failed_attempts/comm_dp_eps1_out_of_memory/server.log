@@ -1,0 +1,48 @@
+21:50:28 | INFO | Initial weights: random (seed 42)
+21:50:28 | INFO | Model: input_dim=5002, hidden_dim=128, 640,513 parameters
+21:50:28 | INFO | Starting Flower server on 127.0.0.1:8099 | 10 rounds | waiting for 2 clients
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=10, round_timeout=600.0s
+[92mINFO [0m:      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+21:50:28 | INFO | ============================================================
+21:50:28 | INFO | Round 1/10 | clients connected: 0/2
+21:50:28 | INFO | Waiting for 2 more client(s) to connect...
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:51:34 | INFO | Round 1: received 2 result(s), 0 failure(s)
+21:51:34 | INFO | Round 1: client 1 (27061 samples) trained with DP-SGD | epsilon so far 0.604 | delta 1e-05 | noise multiplier 1.1475
+21:51:34 | INFO | Round 1: client 2 (25960 samples) trained with DP-SGD | epsilon so far 0.603 | delta 1e-05 | noise multiplier 1.1621
+21:51:34 | INFO | Round 1: global model saved to model\global_model_comm_dp_eps1.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:51:34 | INFO | Round 1: communication 10.25 MB down + 5.13 MB up (all clients) | round 14.9s (fit 14.6s, of which client training <= 14.5s; evaluate 0.2s)
+21:51:34 | INFO | Round 1: eval loss 0.6007 | accuracy 0.8483 | f1 0.8444 | precision 0.8746 | recall 0.8189
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+21:51:34 | INFO | ============================================================
+21:51:34 | INFO | Round 2/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 0 results and 2 failures
+21:51:48 | INFO | Round 2: received 0 result(s), 2 failure(s)
+21:51:48 | WARNING | Round 2: client failure: GrpcBridgeClosed()
+21:51:48 | WARNING | Round 2: client failure: GrpcBridgeClosed()
+21:51:48 | ERROR | Round 2: no client results, keeping previous global model

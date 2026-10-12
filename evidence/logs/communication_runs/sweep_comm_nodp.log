@@ -1,0 +1,10 @@
+=== comm_nodp start 21:29:57
+21:31:41 | INFO | Round 10: eval loss 0.2494 | accuracy 0.9452 | f1 0.9602 | precision 0.9595 | recall 0.9609
+[92mINFO [0m:      Run finished 10 round(s) in 96.04s
+=== comm_nodp end 21:31:43
+=== comm_dp_eps8 start 21:31:43
+C:/Users/50900/AppData/Local/Temp/claude/f--Files-DPSA-LAB-CAT-2-Spam-Mail/5ba9e652-4066-4acc-935c-4382e0bc7141/scratchpad/sweep_comm.sh: line 11:  1851 Segmentation fault      .venv/Scripts/python.exe client2.py --server-address 127.0.0.1:$PORT --rounds 10 "$@" > "$S/comm_${name}_c2.log" 2>&1
+=== comm_dp_eps8 end 21:38:44
+=== comm_dp_eps3 start 21:38:45
+=== comm_dp_eps3 end 21:38:59
+=== comm_dp_eps1 start 21:38:59

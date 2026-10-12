@@ -1,0 +1,13 @@
+{
+  "aggregation": "FedAvg (Flower)",
+  "round": 10,
+  "num_rounds": 10,
+  "client_sample_counts": [
+    27061,
+    25960
+  ],
+  "input_dim": 5002,
+  "hidden_dim": 128,
+  "dropout": 0.3,
+  "model_outputs": "logits (apply sigmoid for probabilities)"
+}

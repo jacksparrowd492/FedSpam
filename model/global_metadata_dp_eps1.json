@@ -1,0 +1,21 @@
+{
+  "aggregation": "FedAvg (Flower)",
+  "round": 10,
+  "num_rounds": 10,
+  "client_sample_counts": [
+    27061,
+    25960
+  ],
+  "input_dim": 5002,
+  "hidden_dim": 128,
+  "dropout": 0.3,
+  "model_outputs": "logits (apply sigmoid for probabilities)",
+  "client_fit_metrics": {
+    "dp_noise_multiplier": 1.162109375,
+    "dp_max_grad_norm": 1.0,
+    "local_epochs": 2.0,
+    "dp_epsilon": 0.9972509450386502,
+    "train_time_s": 12.797662711328307,
+    "dp_delta": 1e-05
+  }
+}

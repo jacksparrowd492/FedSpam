@@ -1,0 +1,45 @@
+{
+  "dataset": {
+    "train_file": "processed_emails_v3_train.csv",
+    "test_file": "processed_emails_v3_test.csv",
+    "train_rows": 66278,
+    "test_rows": 16570
+  },
+  "preprocessing": "Existing shared TF-IDF vectorizer and velocity scaler",
+  "federated": {
+    "model": "Federated FedAvg",
+    "test_samples": 16570,
+    "accuracy": 0.9940253470126735,
+    "precision": 0.9934433907036647,
+    "recall": 0.9949577861163227,
+    "f1": 0.994200011717148,
+    "tn": 7986,
+    "fp": 56,
+    "fn": 43,
+    "tp": 8485,
+    "threshold": 0.5
+  },
+  "centralized": {
+    "model": "Centralized",
+    "test_samples": 16570,
+    "accuracy": 0.9894990947495473,
+    "precision": 0.9889955513931163,
+    "recall": 0.9906191369606003,
+    "f1": 0.9898066783831283,
+    "tn": 7948,
+    "fp": 94,
+    "fn": 80,
+    "tp": 8448,
+    "threshold": 0.5,
+    "training_seconds": 16.6,
+    "epochs": 5,
+    "batch_size": 256,
+    "learning_rate": 0.0001
+  },
+  "notes": [
+    "Both models were evaluated on the same held-out test CSV.",
+    "Centralized training uses the full training CSV.",
+    "The centralized optimizer and training procedure are a baseline, not necessarily identical to the clients' local optimization.",
+    "This script does not modify global_model.pt."
+  ]
+}

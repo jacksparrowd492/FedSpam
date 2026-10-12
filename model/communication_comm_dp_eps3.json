@@ -1,0 +1,267 @@
+{
+  "run": "comm_dp_eps3",
+  "num_rounds": 10,
+  "rounds": [
+    {
+      "round": 1,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 14.203268051147461
+        },
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 14.589670896530151
+        }
+      },
+      "failures": 0,
+      "duration_s": 15.095093727111816,
+      "fit_phase_s": 14.801222085952759,
+      "evaluate_phase_s": 0.21188664436340332,
+      "max_client_train_time_s": 14.589670896530151,
+      "start_offset_s": 48.91053223609924
+    },
+    {
+      "round": 2,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.322238445281982
+        },
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.893436193466187
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.656270742416382,
+      "fit_phase_s": 13.394279479980469,
+      "evaluate_phase_s": 0.19249725341796875,
+      "max_client_train_time_s": 13.322238445281982,
+      "start_offset_s": 64.00763130187988
+    },
+    {
+      "round": 3,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.224019050598145
+        },
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.832295417785645
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.536181449890137,
+      "fit_phase_s": 13.294302463531494,
+      "evaluate_phase_s": 0.17975640296936035,
+      "max_client_train_time_s": 13.224019050598145,
+      "start_offset_s": 77.66807889938354
+    },
+    {
+      "round": 4,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.776126861572266
+        },
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.130812883377075
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.42654037475586,
+      "fit_phase_s": 13.20403003692627,
+      "evaluate_phase_s": 0.1604914665222168,
+      "max_client_train_time_s": 13.130812883377075,
+      "start_offset_s": 91.20629906654358
+    },
+    {
+      "round": 5,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.133008003234863
+        },
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.75497031211853
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.425530910491943,
+      "fit_phase_s": 13.190855026245117,
+      "evaluate_phase_s": 0.16987895965576172,
+      "max_client_train_time_s": 13.133008003234863,
+      "start_offset_s": 104.63689708709717
+    },
+    {
+      "round": 6,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.622867584228516
+        },
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.971061944961548
+        }
+      },
+      "failures": 0,
+      "duration_s": 14.32667589187622,
+      "fit_phase_s": 14.053197622299194,
+      "evaluate_phase_s": 0.19731807708740234,
+      "max_client_train_time_s": 13.971061944961548,
+      "start_offset_s": 118.06494927406311
+    },
+    {
+      "round": 7,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.200313568115234
+        },
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.840219974517822
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.49683165550232,
+      "fit_phase_s": 13.277409553527832,
+      "evaluate_phase_s": 0.156141996383667,
+      "max_client_train_time_s": 13.200313568115234,
+      "start_offset_s": 132.39514231681824
+    },
+    {
+      "round": 8,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 13.05004358291626
+        },
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.6460280418396
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.376637935638428,
+      "fit_phase_s": 13.13062572479248,
+      "evaluate_phase_s": 0.18022465705871582,
+      "max_client_train_time_s": 13.05004358291626,
+      "start_offset_s": 145.89548897743225
+    },
+    {
+      "round": 9,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.53583812713623
+        },
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.950835704803467
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.265456199645996,
+      "fit_phase_s": 13.017951488494873,
+      "evaluate_phase_s": 0.18177103996276855,
+      "max_client_train_time_s": 12.950835704803467,
+      "start_offset_s": 159.2741334438324
+    },
+    {
+      "round": 10,
+      "bytes_down": 10250432,
+      "bytes_up": 5125768,
+      "clients": {
+        "1d14137104eb4407b029e2ab9cfe1067": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.588190078735352
+        },
+        "0fa2ce0039ff4b42883999581a7d6263": {
+          "bytes_down": 5125216,
+          "bytes_up": 2562884,
+          "train_time_s": 12.97033429145813
+        }
+      },
+      "failures": 0,
+      "duration_s": 13.28520941734314,
+      "fit_phase_s": 13.039261102676392,
+      "evaluate_phase_s": 0.17846345901489258,
+      "max_client_train_time_s": 12.97033429145813,
+      "start_offset_s": 172.5436155796051
+    }
+  ],
+  "clients": {
+    "1d14137104eb4407b029e2ab9cfe1067": {
+      "num_examples": 25960,
+      "bytes_received_from_server": 51252160,
+      "bytes_sent_to_server": 25628840,
+      "messages_received": 20,
+      "messages_sent": 20,
+      "train_time_s": 129.6932406425476
+    },
+    "0fa2ce0039ff4b42883999581a7d6263": {
+      "num_examples": 27061,
+      "bytes_received_from_server": 51252160,
+      "bytes_sent_to_server": 25628840,
+      "messages_received": 20,
+      "messages_sent": 20,
+      "train_time_s": 133.54233837127686
+    }
+  },
+  "totals": {
+    "rounds_completed": 10,
+    "bytes_down": 102504320,
+    "bytes_up": 51257680,
+    "bytes_total": 153762000,
+    "training_time_s": 136.89042830467224,
+    "avg_round_s": 13.689042830467224,
+    "min_round_s": 13.265456199645996,
+    "max_round_s": 15.095093727111816,
+    "non_training_time_s": 3.3480899333953857,
+    "client_failures": 0,
+    "wall_clock_s": 185.84933066368103
+  }
+}

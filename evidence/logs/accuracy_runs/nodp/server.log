@@ -1,0 +1,252 @@
+21:13:55 | INFO | Initial weights: random (seed 42)
+21:13:55 | INFO | Model: input_dim=5002, hidden_dim=128, 640,513 parameters
+21:13:55 | INFO | Starting Flower server on 127.0.0.1:8099 | 10 rounds | waiting for 2 clients
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=10, round_timeout=600.0s
+[92mINFO [0m:      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+21:13:55 | INFO | ============================================================
+21:13:55 | INFO | Round 1/10 | clients connected: 0/2
+21:13:55 | INFO | Waiting for 2 more client(s) to connect...
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:14:31 | INFO | Round 1: received 2 result(s), 0 failure(s)
+21:14:31 | INFO | Round 1: client 1 (25960 samples) trained WITHOUT DP
+21:14:31 | INFO | Round 1: client 2 (27061 samples) trained WITHOUT DP
+21:14:31 | INFO | Round 1: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:14:31 | INFO | Round 1: eval loss 0.2753 | accuracy 0.9324 | f1 0.9437 | precision 0.9383 | recall 0.9496
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+21:14:31 | INFO | ============================================================
+21:14:31 | INFO | Round 2/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:14:38 | INFO | Round 2: received 2 result(s), 0 failure(s)
+21:14:38 | INFO | Round 2: client 1 (25960 samples) trained WITHOUT DP
+21:14:38 | INFO | Round 2: client 2 (27061 samples) trained WITHOUT DP
+21:14:38 | INFO | Round 2: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:14:39 | INFO | Round 2: eval loss 0.2391 | accuracy 0.9381 | f1 0.9508 | precision 0.9449 | recall 0.9570
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+21:14:39 | INFO | ============================================================
+21:14:39 | INFO | Round 3/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:14:46 | INFO | Round 3: received 2 result(s), 0 failure(s)
+21:14:46 | INFO | Round 3: client 1 (25960 samples) trained WITHOUT DP
+21:14:46 | INFO | Round 3: client 2 (27061 samples) trained WITHOUT DP
+21:14:46 | INFO | Round 3: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:14:46 | INFO | Round 3: eval loss 0.2376 | accuracy 0.9412 | f1 0.9543 | precision 0.9492 | recall 0.9595
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+21:14:46 | INFO | ============================================================
+21:14:46 | INFO | Round 4/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:14:53 | INFO | Round 4: received 2 result(s), 0 failure(s)
+21:14:53 | INFO | Round 4: client 1 (25960 samples) trained WITHOUT DP
+21:14:53 | INFO | Round 4: client 2 (27061 samples) trained WITHOUT DP
+21:14:53 | INFO | Round 4: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:14:53 | INFO | Round 4: eval loss 0.2388 | accuracy 0.9424 | f1 0.9558 | precision 0.9519 | recall 0.9598
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+21:14:53 | INFO | ============================================================
+21:14:53 | INFO | Round 5/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:00 | INFO | Round 5: received 2 result(s), 0 failure(s)
+21:15:00 | INFO | Round 5: client 1 (25960 samples) trained WITHOUT DP
+21:15:00 | INFO | Round 5: client 2 (27061 samples) trained WITHOUT DP
+21:15:00 | INFO | Round 5: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:01 | INFO | Round 5: eval loss 0.2401 | accuracy 0.9432 | f1 0.9569 | precision 0.9540 | recall 0.9600
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 6]
+21:15:01 | INFO | ============================================================
+21:15:01 | INFO | Round 6/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:09 | INFO | Round 6: received 2 result(s), 0 failure(s)
+21:15:09 | INFO | Round 6: client 1 (25960 samples) trained WITHOUT DP
+21:15:09 | INFO | Round 6: client 2 (27061 samples) trained WITHOUT DP
+21:15:09 | INFO | Round 6: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:09 | INFO | Round 6: eval loss 0.2415 | accuracy 0.9440 | f1 0.9581 | precision 0.9561 | recall 0.9602
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 7]
+21:15:09 | INFO | ============================================================
+21:15:09 | INFO | Round 7/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:16 | INFO | Round 7: received 2 result(s), 0 failure(s)
+21:15:16 | INFO | Round 7: client 1 (25960 samples) trained WITHOUT DP
+21:15:16 | INFO | Round 7: client 2 (27061 samples) trained WITHOUT DP
+21:15:16 | INFO | Round 7: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:16 | INFO | Round 7: eval loss 0.2432 | accuracy 0.9446 | f1 0.9588 | precision 0.9569 | recall 0.9607
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 8]
+21:15:16 | INFO | ============================================================
+21:15:16 | INFO | Round 8/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:23 | INFO | Round 8: received 2 result(s), 0 failure(s)
+21:15:23 | INFO | Round 8: client 1 (27061 samples) trained WITHOUT DP
+21:15:23 | INFO | Round 8: client 2 (25960 samples) trained WITHOUT DP
+21:15:23 | INFO | Round 8: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:23 | INFO | Round 8: eval loss 0.2448 | accuracy 0.9446 | f1 0.9589 | precision 0.9569 | recall 0.9609
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 9]
+21:15:23 | INFO | ============================================================
+21:15:23 | INFO | Round 9/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:30 | INFO | Round 9: received 2 result(s), 0 failure(s)
+21:15:30 | INFO | Round 9: client 1 (25960 samples) trained WITHOUT DP
+21:15:30 | INFO | Round 9: client 2 (27061 samples) trained WITHOUT DP
+21:15:30 | INFO | Round 9: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:30 | INFO | Round 9: eval loss 0.2471 | accuracy 0.9451 | f1 0.9598 | precision 0.9590 | recall 0.9608
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 10]
+21:15:30 | INFO | ============================================================
+21:15:30 | INFO | Round 10/10 | clients connected: 2/2
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+21:15:36 | INFO | Round 10: received 2 result(s), 0 failure(s)
+21:15:36 | INFO | Round 10: client 1 (27061 samples) trained WITHOUT DP
+21:15:36 | INFO | Round 10: client 2 (25960 samples) trained WITHOUT DP
+21:15:36 | INFO | Round 10: global model saved to model\global_model_nodp.pt
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+21:15:37 | INFO | Round 10: eval loss 0.2494 | accuracy 0.9452 | f1 0.9602 | precision 0.9595 | recall 0.9609
+[92mINFO [0m:      
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 10 round(s) in 101.48s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.2752539830491258
+[92mINFO [0m:      		round 2: 0.23911790318318943
+[92mINFO [0m:      		round 3: 0.23759354460564927
+[92mINFO [0m:      		round 4: 0.23878213090734568
+[92mINFO [0m:      		round 5: 0.24008243343670407
+[92mINFO [0m:      		round 6: 0.2414920135209614
+[92mINFO [0m:      		round 7: 0.24315938805001996
+[92mINFO [0m:      		round 8: 0.2447814544727605
+[92mINFO [0m:      		round 9: 0.24706044774695005
+[92mINFO [0m:      		round 10: 0.249437650191444
+[92mINFO [0m:      	History (metrics, distributed, fit):
+[92mINFO [0m:      	{'local_epochs': [(1, 2.0),
+[92mINFO [0m:      	                  (2, 2.0),
+[92mINFO [0m:      	                  (3, 2.0),
+[92mINFO [0m:      	                  (4, 2.0),
+[92mINFO [0m:      	                  (5, 2.0),
+[92mINFO [0m:      	                  (6, 2.0),
+[92mINFO [0m:      	                  (7, 2.0),
+[92mINFO [0m:      	                  (8, 2.0),
+[92mINFO [0m:      	                  (9, 2.0),
+[92mINFO [0m:      	                  (10, 2.0)],
+[92mINFO [0m:      	 'train_accuracy': [(1, 0.9299900039606949),
+[92mINFO [0m:      	                    (2, 0.9381943003715509),
+[92mINFO [0m:      	                    (3, 0.9416457629995663),
+[92mINFO [0m:      	                    (4, 0.9428339714452764),
+[92mINFO [0m:      	                    (5, 0.9442107844061787),
+[92mINFO [0m:      	                    (6, 0.9449463420154278),
+[92mINFO [0m:      	                    (7, 0.9457384809792346),
+[92mINFO [0m:      	                    (8, 0.9463420154278493),
+[92mINFO [0m:      	                    (9, 0.9465494803945607),
+[92mINFO [0m:      	                    (10, 0.9468323871673487)],
+[92mINFO [0m:      	 'train_loss': [(1, 0.2842917368604296),
+[92mINFO [0m:      	                (2, 0.19843198556543415),
+[92mINFO [0m:      	                (3, 0.1847172725378497),
+[92mINFO [0m:      	                (4, 0.17973559675909476),
+[92mINFO [0m:      	                (5, 0.1767844052188941),
+[92mINFO [0m:      	                (6, 0.17514863973058542),
+[92mINFO [0m:      	                (7, 0.17319324650196405),
+[92mINFO [0m:      	                (8, 0.17186363380766032),
+[92mINFO [0m:      	                (9, 0.1709749803772045),
+[92mINFO [0m:      	                (10, 0.17092476387901093)],
+[92mINFO [0m:      	 'train_time_s': [(1, 10.182822482529833),
+[92mINFO [0m:      	                  (2, 7.058434929361805),
+[92mINFO [0m:      	                  (3, 6.9447929118827645),
+[92mINFO [0m:      	                  (4, 6.934132513696233),
+[92mINFO [0m:      	                  (5, 6.895721297467259),
+[92mINFO [0m:      	                  (6, 7.951240571908905),
+[92mINFO [0m:      	                  (7, 6.697972781417016),
+[92mINFO [0m:      	                  (8, 6.779959824158037),
+[92mINFO [0m:      	                  (9, 6.406548137853296),
+[92mINFO [0m:      	                  (10, 6.504222169123606)]}
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.9324130647959569),
+[92mINFO [0m:      	              (2, 0.9380704533454024),
+[92mINFO [0m:      	              (3, 0.941163159085766),
+[92mINFO [0m:      	              (4, 0.9423700686429811),
+[92mINFO [0m:      	              (5, 0.9431998189635664),
+[92mINFO [0m:      	              (6, 0.9440295692841517),
+[92mINFO [0m:      	              (7, 0.9445575922154333),
+[92mINFO [0m:      	              (8, 0.9445575922154333),
+[92mINFO [0m:      	              (9, 0.945085615146715),
+[92mINFO [0m:      	              (10, 0.9452364788413669)],
+[92mINFO [0m:      	 'f1': [(1, 0.9437020088034793),
+[92mINFO [0m:      	        (2, 0.9507830800265115),
+[92mINFO [0m:      	        (3, 0.9542626177560668),
+[92mINFO [0m:      	        (4, 0.9557528664189717),
+[92mINFO [0m:      	        (5, 0.9569256961294612),
+[92mINFO [0m:      	        (6, 0.958102632635705),
+[92mINFO [0m:      	        (7, 0.9587736990274243),
+[92mINFO [0m:      	        (8, 0.9588510094963085),
+[92mINFO [0m:      	        (9, 0.9598241073750422),
+[92mINFO [0m:      	        (10, 0.9601588114416486)],
+[92mINFO [0m:      	 'precision': [(1, 0.938272585474221),
+[92mINFO [0m:      	               (2, 0.9449353983843088),
+[92mINFO [0m:      	               (3, 0.9492495282317582),
+[92mINFO [0m:      	               (4, 0.951866416219136),
+[92mINFO [0m:      	               (5, 0.953962106451255),
+[92mINFO [0m:      	               (6, 0.9560737771602975),
+[92mINFO [0m:      	               (7, 0.956943035709031),
+[92mINFO [0m:      	               (8, 0.9569417907376689),
+[92mINFO [0m:      	               (9, 0.9589586320873845),
+[92mINFO [0m:      	               (10, 0.9594645707802478)],
+[92mINFO [0m:      	 'recall': [(1, 0.9496238973462984),
+[92mINFO [0m:      	            (2, 0.9569744142019054),
+[92mINFO [0m:      	            (3, 0.9595318231754669),
+[92mINFO [0m:      	            (4, 0.9598338142040397),
+[92mINFO [0m:      	            (5, 0.9600351415564214),
+[92mINFO [0m:      	            (6, 0.9602364689088032),
+[92mINFO [0m:      	            (7, 0.9606996597188595),
+[92mINFO [0m:      	            (8, 0.9608608595003428),
+[92mINFO [0m:      	            (9, 0.9607601958241518),
+[92mINFO [0m:      	            (10, 0.9609213956056355)]}
+[92mINFO [0m:      
+21:15:37 | INFO | Federated training finished. Final global model: model\global_model_nodp.pt
